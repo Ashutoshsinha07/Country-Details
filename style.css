@@ -156,3 +156,20 @@ a {
     flex-direction: column;
   }
 }
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.page-button.active {
+  font-weight: bold;
+  background-color: #ddd;
+}
