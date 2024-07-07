@@ -159,17 +159,37 @@ a {
 .pagination-controls {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  flex-wrap: wrap; /* Allow the buttons to wrap onto multiple lines */
+  margin: 20px 0;
+  gap: 5px; /* Add gap between buttons */
 }
 
 .page-button {
-  padding: 10px;
-  margin: 0 5px;
+  padding: 10px 20px;
   border: none;
+  background-color: var(--elements-color);
+  color: var(--text-color);
   cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 0 1 auto; /* Allow the buttons to shrink but not grow too much */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .page-button.active {
-  font-weight: bold;
-  background-color: #ddd;
+  background-color: var(--text-color);
+  color: var(--elements-color);
+}
+
+.page-button:hover {
+  background-color: var(--text-color);
+  color: var(--elements-color);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .page-button {
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    flex: 0 1 auto; /* Allow buttons to shrink but not grow too much */
+  }
 }
